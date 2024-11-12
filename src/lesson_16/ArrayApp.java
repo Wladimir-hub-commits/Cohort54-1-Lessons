@@ -1,5 +1,9 @@
 package lesson_16;
 
+/**
+ * Author Waldemar Ilz
+ *{code data} 05.11.2024
+ */
 public class ArrayApp {
     public static void main(String[] args) {
 

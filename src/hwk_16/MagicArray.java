@@ -25,7 +25,6 @@ Searching for an element by indexOf value - (return an index if such a value exi
  A constructor that takes a regular array and creates a MagicArray with the same values
 9. Удаление элемента по значению -( Delete an item by value)
 
-
  */
 
 public class MagicArray {
