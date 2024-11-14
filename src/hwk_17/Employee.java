@@ -28,6 +28,10 @@ public class Employee {
         this.salary = salary;
     }
 
+    public void info(){
+        System.out.printf("Employee %s, age: %d, salary: %.2f\n", name,age,salary);
+    }
+
     public String getName() {
         return name;
     }
@@ -39,9 +43,5 @@ public class Employee {
     public double getSalary() {
         return salary;
     }
-    public void info(){
-        System.out.println("Имя:" +name );
-        System.out.println("Возраст:" + age);
-        System.out.println("Зарплата:" + salary);
-    }
+
 }

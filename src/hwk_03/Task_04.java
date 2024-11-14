@@ -24,7 +24,7 @@ public class Task_04 {
 
         // Сумма всех чисел деленная на их количество
         int sumTemp = t + t1 + t2 + t3 + t4 + t5 + t6;
-        System.out.println("sumTemp;" + sumTemp);
+        System.out.println("sumTemp: " + sumTemp);
 
 
         // Todo Разобраться с потерей дробной части
