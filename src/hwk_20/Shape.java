@@ -58,7 +58,7 @@ setColor(String color).
 •	Аналогично создаете класс Circle.
 •	В методе main работаете с объектами Rectangle и Circle,
  используя унаследованные и собственные методы этих классов.
-
+Shape - Форма.
      */
 public class Shape {
 
