@@ -1,4 +1,4 @@
-package hwk_21;
+package hwk_21.Task_02;
 
 /**
  * Author Waldemar Ilz

@@ -1,4 +1,4 @@
-package hwk_21;
+package hwk_21.Task_02;
 
 /**
  * Author Waldemar Ilz
@@ -16,9 +16,9 @@ public class ComponentApp {
         Memory memory = new Memory("Corsair", "Vengeance LPX 16GB");
         Storage storage = new Storage("Asus", "X515Jab");
 
-        Computer computer = new Computer(processor,memory,storage);
+       // Computer computer = new Computer(processor,memory,storage);
 
-        computer.displayConfiguration();
+       // computer.displayConfiguration();
 
     }
 }

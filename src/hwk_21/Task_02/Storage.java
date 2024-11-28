@@ -1,4 +1,4 @@
-package hwk_21;
+package hwk_21.Task_02;
 
 /**
  * Author Waldemar Ilz
@@ -6,7 +6,7 @@ package hwk_21;
  */
 
 public class Storage extends Component {
-     public Storage(String brand,String model){
+     public Storage(String brand, String model){
          super (brand,model);
      }
 

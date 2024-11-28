@@ -1,4 +1,4 @@
-package hwk_21;
+package hwk_21.Task_02;
 
 /**
  * Author Waldemar Ilz
@@ -9,7 +9,8 @@ package hwk_21;
 2. Создайте производные классы: Processor, Memory, Storage от класса Component.
  */
  public class Processor extends Component{
-    public Processor(String brand,String model){
+
+    public Processor(String brand, String model){
         super(brand, model);
     }
 

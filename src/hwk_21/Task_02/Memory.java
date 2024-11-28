@@ -1,4 +1,4 @@
-package hwk_21;
+package hwk_21.Task_02;
 
 /**
  * Author Waldemar Ilz
@@ -6,7 +6,8 @@ package hwk_21;
  */
 
  public class Memory extends Component {
-    public Memory(String brand,String model){
+
+    public Memory(String brand, String model){
         super(brand,model);
     }
 }
