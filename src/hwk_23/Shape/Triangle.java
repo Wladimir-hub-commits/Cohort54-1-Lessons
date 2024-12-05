@@ -12,6 +12,7 @@ public class Triangle extends  Shape {
 
     }
 
+
     @Override
     public double area() {
         double s = (a + b + c) / 2; // полупериметр

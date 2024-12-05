@@ -15,7 +15,7 @@ Task 1
  и периметр всех фигур в массиве.
  */
 
-abstract class Shape {
+public abstract class Shape {
     public abstract double area();
     public abstract double perimeter();
 
