@@ -21,7 +21,7 @@ public class MathOperation {
         System.out.println("var1 + var2 = " + result );
 
         result = 15 + 6 + var1;
-        // Закоментировать строку ctrl + /
+        // Закoментировать строку ctrl + /
         System.out.println("result + :" + result);
 
         //Вычитание "-"

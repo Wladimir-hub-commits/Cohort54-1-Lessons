@@ -12,7 +12,7 @@ public class Book implements Printable{
         this.author = author;
     }
 
-
+    //переопределение абстрактного метода (интерфейса)
     @Override
     public void print() {
         System.out.printf("Book: %s (%s)\n", title, author);
