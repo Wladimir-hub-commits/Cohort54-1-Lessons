@@ -1,6 +1,9 @@
 package lesson_26;
 
-
+/**
+ * Author Waldemar Ilz
+ * {code data} 12.12.2024
+ */
 
 import list.MyArrayList;
 import list.MyList;

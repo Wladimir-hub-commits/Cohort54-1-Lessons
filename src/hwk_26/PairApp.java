@@ -12,12 +12,15 @@ public class PairApp {
         System.out.println(pair.getFirst());
         System.out.println(pair.getSecond());
 
+        System.out.println(pair);
+
         System.out.println("\n====================\n");
 
         pair.swap();
         System.out.println(pair.getFirst());
         System.out.println(pair.getSecond());
 
+        System.out.println(pair);
     }
 
     /*
