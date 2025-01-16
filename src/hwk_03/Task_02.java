@@ -33,7 +33,6 @@ public class Task_02 {
         int average = (var1 + var2 + var3 + var4) / 4;
         int rest = (var1 + var2 + var3 + var4) % 4;
 
-
         System.out.println("average:" + average);
         System.out.println("остаток деления на 4 равен:" + rest);
 

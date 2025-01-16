@@ -1,4 +1,4 @@
-package hwk_019sergey;
+package hwk_019S;
 
 /**
  * Author Waldemar Ilz

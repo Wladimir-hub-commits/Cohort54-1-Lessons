@@ -14,6 +14,8 @@ public class Variables {
 
         int mySecondVariable = 25; // Объявление и инициализация в одной строке
 
+        System.out.println(myFirstVariable);
+
         System.out.println(mySecondVariable);
 
         // Ctrl + Alt = L - Выравнивает код.
@@ -25,9 +27,9 @@ public class Variables {
         byte byteVariable = 125; // Объявление и инициализация переменнеой типа byte
         System.out.println("byteVariable: " + byteVariable);
 
-        // ctrl + D  - продублировать строчку. в которой находится куросор
-        // ctrl + Alt + стрелка в верх в нис
-        // ctrl + y удалить строчку в которой находится курсор
+        // Ctrl + D - продублировать строчку. в которой находится куросор
+        // Ctrl + y - удалить строчку в которой находится курсор
+        // Shift + Alt + стрелка в верх в нис
 
         byteVariable = -100;
         System.out.println("byteVariable: " + byteVariable);

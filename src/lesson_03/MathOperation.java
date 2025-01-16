@@ -86,7 +86,7 @@ public class MathOperation {
         System.out.printf("Результат деления %d на %d равен = %d", a, b,res);
         System.out.println("Test");
 
-        System.out.printf("Округленныйвывод результата деления %f\n", resultDouble);
+        System.out.printf("Округленный вывод результата деления %f\n", resultDouble);
         System.out.printf("Округленный вывод результата деления %.4f\n", resultDouble);
 
         //Проблема с double

@@ -10,7 +10,7 @@ package hwk_03;
 
 Вычислите среднюю температуру за неделю и выведете ее на печать.
  */
-public class Task_04 {
+public class Task_03_2 {
     public static void main(String[] args) {
         int t = 20;
         int t1 = 18;
@@ -27,7 +27,6 @@ public class Task_04 {
         System.out.println("sumTemp: " + sumTemp);
 
 
-        // Todo Разобраться с потерей дробной части
 
         // 141 / 7 = 20 и 1 в остатке
         // 141.0 / 7.0 = 20.142 (double)

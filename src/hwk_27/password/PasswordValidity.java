@@ -57,8 +57,22 @@ public class PasswordValidity {
         // SpecialChars - Специальные Символы
         String SpecialChars = "!%$@&*()[}";
 
-        for (char v : password.toCharArray())//Это конструкция для "уловления" каждого символа строки password{
+        //for: Это ключевое слово, которое начинает цикл for.
+        for (char v : password.toCharArray())//Это конструкция для
+            // "уловления" каждого символа строки password{
+            /*
+            password.toCharArray(): Метод toCharArray() класса String
+            преобразует строку password в массив символов (char[]),
+             где каждый элемент массива представляет один символ строки.
+            char v: Здесь c — это переменная типа char, которая будет
+            принимать значение каждого символа из массива по мере
+            итерации.
+            Таким образом, строка for (char v : password.toCharArray())
+             означает следующее: "Для каждого символа v в массиве
+             символов, полученном из строки password, выполнить
+             тело цикла."
 
+             */
             if (Character.isLowerCase(v)) {
                 hasLowerCase = true;
             } else if (Character.isUpperCase(v)) {

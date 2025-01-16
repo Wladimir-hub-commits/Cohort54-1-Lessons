@@ -8,13 +8,15 @@ package hwk_03;
 /*
 1.Пусть цена товара A составляет 1000 Euro, а товара B составляет 500 Euro.
 
-2.Если клиент покупает товары вместе, то на них действует скидка 10% на всю покупку.
+2.Если клиент покупает товары вместе, то на них действует скидка 10%
+на всю покупку.
 
-3.Выведите на экран значение переменной, которая соответствует стоимости товаров A+B со скидкой.
+3.Выведите на экран значение переменной, которая соответствует стоимости
+товаров A+B со скидкой.
 4.Отдельно выведите на экран сумму скидки для этой покупки (в деньгах).
  */
 
-public class Task_03 {
+public class Task_03_1 {
 
     public static void main(String[] args) {
         double priceA = 1000;
@@ -23,7 +25,7 @@ public class Task_03 {
 
         double discount = 10; // в процентах
 
-        double discountMoney =( priceA + priceB) * discount / 100;
+        double discountMoney = ( priceA + priceB) * discount / 100;
 
         double priceWithDiscount = priceA + priceB - discountMoney;
 
