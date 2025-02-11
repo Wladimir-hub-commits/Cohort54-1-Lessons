@@ -14,7 +14,7 @@ public class Hello { // объявляем клас Hello
         // Набор команд / инструкций
 
         // sout
-        System.out.println("Hello,World"); // инструкция, выводит текст Hello, World!  на экран
+        System.out.println("Hello,World"); // инструкция,  выводит текст Hello, World!  на экран
 
     }
 

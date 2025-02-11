@@ -1,4 +1,4 @@
-package lessnon_29.equals;
+package lesson_29.equals;
 
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public class Lesson_29 {
         Employee employee = new Employee("Max", "Ivanov", 25);
         Employee employee1 = new Employee("max", "Ivanov", 25);
         Employee employee2 = new Employee("Peter", "Petrov", 33);
-        Employee employee3 = new Employee("Peter", "Petrov", 25);
+        Employee employee3 = new Employee("Peter", "Petrov", 55);
         Employee employee4 = new Employee("Max", "Ivanov", 25);
 
         System.out.println(employee2 == employee1); // false
@@ -40,7 +40,7 @@ public class Lesson_29 {
         Employee nullEmployee = new Employee(null, null, 0);
         Employee nullEmployee1 = new Employee(null, null, 0);
         System.out.println(nullEmployee.equals(nullEmployee1));
-        System.out.println(Objects.equals(null,null));
+        System.out.println(Objects.equals(null,null)); // true
 
 
 

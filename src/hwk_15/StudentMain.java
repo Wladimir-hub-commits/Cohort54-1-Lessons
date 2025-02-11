@@ -13,7 +13,7 @@ public class StudentMain {
         student.studying();
         student.development();
         System.out.println("\n==================\n");
-        Student student1 = new Student("Waldemar", "Студент", 40 );
+        Student student1 = new Student("waldemar", "Студент", 40 );
         System.out.println();
         student1.info();
 
