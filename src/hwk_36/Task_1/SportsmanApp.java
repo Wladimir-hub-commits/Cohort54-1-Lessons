@@ -12,48 +12,83 @@ public class SportsmanApp {
     public static void main(String[] args) {
 
 
-        Sportsman[] sportsman = new Sportsman[5];
-        sportsman[0] = new Sportsman("Waldemar ", 44, 600);
-        sportsman[1] = new Sportsman("Stefan", 48, 550);
-        sportsman[2] = new Sportsman("Igor", 35, 700);
-        sportsman[3] = new Sportsman("Edward", 55, 800);
-        sportsman[4] = new Sportsman("Sergey Bugaenko", 100, 1000);
+        Sportsman[] sportsmanArray = new Sportsman[6];
+        sportsmanArray[0] = new Sportsman("Waldemar ", 44, 60.38);
+        sportsmanArray[1] = new Sportsman("Stefan", 48, 55.65);
+        sportsmanArray[2] = new Sportsman("Igor", 35, 90.50);
+        sportsmanArray[3] = new Sportsman("Edward", 55, 80.70);
+        sportsmanArray[4] = new Sportsman("Sergey Bugaenko", 100, -1_600_000_000);
+        sportsmanArray[5] = new Sportsman("Олег", 90, 1_400_000_000);
 
-        System.out.println(Arrays.toString(sportsman));
-
-        // Сортировка по возрасту с использованием Comparable
-        System.out.println("\nСортировка по возрасту с использованием Comparable: \n");
-        Arrays.sort(sportsman);
-        System.out.println(Arrays.toString(sportsman));
-
-        // Сортировка по естественному порядку (по имени)
-        Arrays.sort(sportsman);
-        System.out.println("\nСортировка по имени по естественному порядку:\n");
-        for (Sportsman s : sportsman) {
-            System.out.println(s);
+        Arrays.sort(sportsmanArray);
+        // Распeчатка массива не в алфавитном порядке
+        for (Sportsman sportsman : sportsmanArray) {
+            System.out.println(sportsman);
         }
+         // Распечатка массива по очкам/рейтингу
+        System.out.println("==============================");
+        Arrays.sort(sportsmanArray, new ScoreSportsmanComparator());
+        for (Sportsman sportsman : sportsmanArray) {
+            System.out.println(sportsman);
 
-        // Сортировка по рейтингу с использованием Comparator
-        Arrays.sort(sportsman, new ScoreSportsmanComparator());
-        System.out.println("\nСортировка по рейтингу с использованием Comparator:\n");
-        for (Sportsman s : sportsman) {
-            System.out.println(s);
         }
+        System.out.println((int) (90.75-90.50));
+        System.out.println(Double.compare(90.75, 90.50));
+        System.out.println("==============================\n");
 
-        // Сортировка по возрасту с использованием анонимного класса
-        Arrays.sort(sportsman, new Comparator<Sportsman>() {
+        //* анонимного класса Comparator для сортировки по третьему полю (например, age).
+        Arrays.sort(sportsmanArray, new Comparator<Sportsman>() {
             @Override
             public int compare(Sportsman s1, Sportsman s2) {
-                return Integer.compare(s1.getAge(), s2.getAge()); // Сравнение по возрасту
+            // Сравниваем примитивы вычитанием - может произойти переполнение типа данных
+                return s1.getAge() - s2.getAge();
             }
         });
-        System.out.println("\nСортировка по возрасту с использованием анонимного класса:\n");
-        for (Sportsman s : sportsman) {
-            System.out.println(s);
+
+        for (Sportsman sportsman : sportsmanArray) {
+            System.out.println(sportsman);
         }
+
+        int x1 = -1_500_000_000;
+        int y2 = 1_400_000_000;
+        System.out.println(x1 - y2);
+
+
+//            // Сортировка по возрасту с использованием Comparable
+//            System.out.println("\nСортировка по возрасту с использованием Comparable: \n");
+//
+//            Arrays.sort(sportsmanArray);
+//            System.out.println(Arrays.toString(sportsmanArray));
+//
+//            // Сортировка по естественному порядку (по имени)
+//            Arrays.sort(sportsmanArray);
+//            System.out.println("\nСортировка по имени по естественному порядку:\n");
+//            for (Sportsman s : sportsmanArray) {
+//                System.out.println(s);
+//            }
+//
+//            // Сортировка по рейтингу с использованием Comparator
+//            Arrays.sort(sportsmanArray, new ScoreSportsmanComparator());
+//            System.out.println("\nСортировка по рейтингу с использованием Comparator:\n");
+//            for (Sportsman s : sportsmanArray) {
+//                System.out.println(s);
+//            }
+//
+//            // Сортировка по возрасту с использованием анонимного класса
+//            Arrays.sort(sportsmanArray, new Comparator<Sportsman>() {
+//                @Override
+//                public int compare(Sportsman s1, Sportsman s2) {
+//                    return Integer.compare(s1.getAge(), s2.getAge()); // Сравнение по возрасту
+//                }
+//            });
+//            System.out.println("\nСортировка по возрасту с использованием анонимного класса:\n");
+//            for (Sportsman s : sportsmanArray) {
+//                System.out.println(s);
+//            }
     }
 
 
 }
+
 
 

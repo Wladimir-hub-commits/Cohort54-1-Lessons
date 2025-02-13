@@ -166,6 +166,11 @@ public class ComparatorApp {
         // Отсортировать машины по году выпуска, если год равен - отсортировать по модели в обратном порядке
         // Отсортировать машины по году выпуска, если год равен - отсортировать по максимальной скорости в порядке возрастания
 
+        System.out.println("\n===================\n");
+
+       Arrays.sort(cars, Comparator.comparing(Car::getYear).thenComparing(Car::getModel, Comparator.reverseOrder()));
+        System.out.println(Arrays.toString(cars));
+
 
     }
 }

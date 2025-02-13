@@ -31,21 +31,28 @@ package hwk_36.Task_1;
 public class Sportsman implements Comparable<Sportsman> {
 
     private String name;
+    private double score;
     private int age;
-    private int score;
 
-    public Sportsman(String name, int age, int score) {
+    public Sportsman(String name, int age, double score) {
         this.name = name;
         this.age = age;
         this.score = score;
     }
 
     @Override
+    public int compareTo(Sportsman other) {
+        return this.getName().compareTo(other.getName());
+
+
+    }
+
+    @Override
     public String toString() {
         return "Sportsman{" +
                 "name='" + name + '\'' +
-                ", age=" + age +
                 ", score=" + score +
+                ", age=" + age +
                 '}';
     }
 
@@ -65,19 +72,13 @@ public class Sportsman implements Comparable<Sportsman> {
         this.age = age;
     }
 
-    public int getScore() {
+    public double getScore() {
         return score;
     }
 
-    public void setScore(int score) {
+    public void setScore(double score) {
         this.score = score;
     }
-
-    @Override
-    public int compareTo(Sportsman sportsman1) {
-        return this.age - sportsman1.getAge();
-    }
-
 
 
 }
