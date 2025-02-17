@@ -2,84 +2,89 @@ package lesson_37;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 public class CollectionExample {
     public static void main(String[] args) {
 
-        // Inteface Collection
-        //
+        // Интерфейс Collection гарантирует наличие базовых методов для всех расширяющих его интерфейсов
+        // Это позволяет единообразно обрабатывать различные типы коллекций
 
-        // Collection
-        //
-        //
-        Collection<String> strings = new java.util.ArrayList<>();
+        // Создаем коллекцию строк
+        // Ссылка типа интерфейса -> набор доступных методов + ссылку на объект какого класса может хранить эта переменная
+        // Справа мы можем подставить объекты разных классов (получить разные реализации этого интерфейса)
+        Collection<String> strings = new ArrayList<>();
 
-        // int size = strings.size();
-
+        // int size() - возвращает кол-во элементов в коллекции
         System.out.println("strings.size(): " + strings.size());
 
-        // boolean isEmpty = strings.isEmpty();
+        // boolean isEmpty() - возвращает true, если коллекция пустая
         System.out.println("strings.isEmpty(): " + strings.isEmpty());
 
-       // boolean add = strings.add("Java");
+        // boolean add(T t) - добавляет элемент в коллекцию
         strings.add("Java");
-        strings.add("strings.add(\"Python\")"); // strings.add("Python");
+        System.out.println("strings.add(\"Python\"): " + strings.add("Python"));
 
-        //
+        // Переопределенный метод toString для красивого вывода элементов коллекции
+        System.out.println(strings);
+
+        // Метод .of() - это статический метод в нескольких интерфейсах и классах. Был введен в Java 9
+        // Создает неизменяемый экземпляр коллекции из предоставленных элементов
+        // Доступен для List, Set, Map
+
+        Collection<Integer> integers = List.of(0, 1, 2, 3, 5, 6);
+        System.out.println("integers: " + integers);
+        // integers.add(7); // попытка модифицировать (изменить) неизменяемую коллекцию приведет в ошибку (Исключительная ситуация)
+
+      /*
+        strings.add("JS");
+        strings.add("Go Land");
+        strings.add("Ruby");
+       */
+
+        // addAll(Collection<? extends T> col) - добавляет все элементы из указанной коллекции. (СЛОЖЕНИЕ)
+        strings.addAll(List.of("JS", "Go Land", "Ruby"));
 
         System.out.println(strings);
 
-        // method.of -
-        //
-        //
+        System.out.println("\n===================\n");
 
-        Collection<Integer> integers = List.of(0,1, 2, 3, 4, 5);
-
-        System.out.println("integers: " + integers);
-        //
-        //
-        strings.addAll(List.of("Java", "Python", "JS"));
-
-        System.out.println( strings);
-
-        System.out.println("\n==============================\n");
-
-        // remove
+        // Вычитание
+        // removeAll(Collection<?> col) - удаляет все элементы содержащиеся в коллекции col (параметр) из коллекции на которой вызван метод
         Collection<Integer> numbers = new ArrayList<>();
-        numbers.addAll(List.of(0,1, 2, 3, 4, 5));
+        numbers.addAll(List.of(0, 1, 2, 3, 4, 5, 3, 3));
 
         System.out.println("numbers: " + numbers);
-        numbers.removeAll(List.of(3,2,1));
+        numbers.removeAll(List.of(3, 2, 1));
 
-        System.out.println("numbers.removeAll(List.of(3,2,1)): " + numbers);
+        System.out.println("numbers.removeAll(List.of(3, 2, 1)): " + numbers);
 
-        //
-        //
-        //
-        //
+        // Пересечение
+        // retainAll(Collection<?> col) - Оставляет в коллекции вызова только те элементы, которые содержаться в коллекции col.
+        // Удаляет из коллекции вызова элементы, которые НЕ содержаться в коллекции col
+        // [3, 3, 2, 2, 1] retainAll [3, 2] -> [3, 3, 2, 2]
+
         Collection<Integer> colA = new ArrayList<>();
-        Collection<Integer> colb = new ArrayList<>();
-
-        colA.addAll(List.of(10, 20, 30, 40, 50));
-        colb.addAll(List.of( 20, 30, 40));
-
+        Collection<Integer> colB = new ArrayList<>();
+        colA.addAll(List.of(10, 20, 30, 20, 40, 50, 60));
+        colB.addAll(List.of(20, 30, 40, 100));
         System.out.println("colA: " + colA);
-        System.out.println("colb: " + colb);
+        System.out.println("colB: " + colB);
+        colA.retainAll(colB);
+        System.out.println("colA.retainAll(colB): " + colA);
+//        colB.retainAll(colA);
+//        System.out.println("colB: " + colB);
 
-        colA.retainAll(colb);
-
-        System.out.println("colA.retainAll(colb): " + colA);
-
-        //
-        //
-        //
-        System.out.println("colA.removeAll(100): " + colA.removeAll(Collections.singleton(100)));
-        System.out.println("ColA.removeAll(20): " + colA.removeAll(Collections.singleton(20)));
+        // boolean remove(Object obj) - удаляет элемент из коллекции. Возвращает true, если элемент был удален
+        System.out.println("colA.remove(100): " + colA.remove(100));
+//        colA.retainAll(List.of(20)); // если нужно удалить все вхождения
+        System.out.println("colA.remove(20): " + colA.remove(20)); // Удалит одно значение
         System.out.println("colA: " + colA);
+
+        // clear() удаляет все элементы из коллекции
         colA.clear();
-        System.out.println("colA" + colA);
+        System.out.println("colA: " + colA);
+
 
     }
 }
