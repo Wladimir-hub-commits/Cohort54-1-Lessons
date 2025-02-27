@@ -52,7 +52,9 @@ public class IntersectionOfTwoMaps {
         map2.put("date", 40);
 
         Map<String, Integer> intersectionMap = intersection(map1, map2);
-        intersectionMap.forEach((key, value) -> System.out.println(key + ": " + value));
+        intersectionMap.forEach((key, value) -> System.out.println(key + ": " + value));Map<String, Integer> intersectionofTwoMap = intersection(map1, map2);
+
+
     }
 
     public static Map<String, Integer> intersection(Map<String, Integer> map1, Map<String, Integer> map2) {
@@ -67,6 +69,8 @@ public class IntersectionOfTwoMaps {
 
         return intersectionMap;
     }
+
+
 
 
 }
