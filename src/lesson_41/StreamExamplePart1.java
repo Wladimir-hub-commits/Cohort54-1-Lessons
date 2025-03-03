@@ -9,7 +9,7 @@ import java.util.stream.Stream;
  * {code data} 25.02.2025
  */
 
-public class StreamExample {
+public class StreamExamplePart1 {
 
      /*
     Stream API - мощный инструмент, позволяющий обрабатывать наборы данных в декларативном стиле

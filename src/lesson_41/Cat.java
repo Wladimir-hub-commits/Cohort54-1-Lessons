@@ -1,5 +1,7 @@
 package lesson_41;
 
+import java.util.Objects;
+
 /**
  * Author Waldemar Ilz
  * {code data} 25.02.2025
@@ -48,5 +50,17 @@ public class Cat {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Cat cat)) return false;
+        return weight == cat.weight && Objects.equals(name, cat.name) && Objects.equals(color, cat.color);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, weight, color);
     }
 }

@@ -18,8 +18,9 @@ public class FilteringPeople {
 
     private static void task3() {
 
-        List<Person> people = List.of(new Person("John", 25, "New York"),
-                new Person("Alice", 30, "London"),
+        List<Person> people = List.of(
+                new Person("John", 25, "New York"),
+                new Person("Alice", 30, "Berlin"),
                 new Person("Bob", 20, "Paris"),
                 new Person("Eve", 35, "Berlin"));
 
