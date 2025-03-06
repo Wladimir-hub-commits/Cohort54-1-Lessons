@@ -64,7 +64,7 @@ public class SortingTheValueOfTheLastDigit {
 
         System.out.println("\n=====================Stream API Declarative style=============================\n");
 
-        // Сортируем по последней цифре с помощью stream (дикларированный метод)
+        // Сортируем по последней цифре с помощью stream (декларированный метод)
         List<Integer> result = filteredNumbers.stream()
                 .filter(n -> n % 10 > 0)
                 .sorted((n1,n2) -> Integer.compare(n1 % 10, n2 % 10))
