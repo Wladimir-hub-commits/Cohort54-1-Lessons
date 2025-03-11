@@ -1,0 +1,7 @@
+Cat|9|true
+Jon|2|true
+Cat|7|false
+Cat|4|true
+Cat|2|false
+Cat|6|false
+Sebastian Junior|1|true

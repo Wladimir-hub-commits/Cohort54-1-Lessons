@@ -1,7 +1,13 @@
 package lesson_43;
 
+/**
+ * Author Waldemar Ilz
+ * {code data} 04.03.2025
+ */
+
 import javax.print.DocFlavor;
 import java.net.MalformedURLException;
+import java.net.URL;
 
 /**
  * Author Waldemar Ilz
