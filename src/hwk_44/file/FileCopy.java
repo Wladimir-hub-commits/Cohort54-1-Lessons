@@ -33,7 +33,7 @@ public class FileCopy {
     public static void main(String[] args) {
 
         File path = new File("src/hwk_44/files/text.txt");
-        path.mkdirs();
+
 
 
         String sourceFile = "text.txt";// исходный файл
